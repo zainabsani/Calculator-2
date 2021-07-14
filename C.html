@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Task 2</h3>
+
+<p>Calculator App: This will print out a multiplication table for your number only if n is a multiple of 3, 5 or 7. The multiplication table range is 1- 20</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(p1) {
+  if (p1 === "" || isNaN(p1)) { return "You have to enter a value"; }
+  
+  else if(p1%3 === 0 || p1%5 === 0 || p1%7 === 0){
+  let table = "";
+for (let i = 1; i < 21; i++) {
+  table += p1 + "*" + i + " = " + p1*i + "<br>";
+}
+  return "Multiplication table <br/>" + table;
+  } 
+  
+  else { return "Your number is not a multiple of 3, 5 or 7"; }
+}
+
+var num = prompt("Enter a number to see it's multiplication table (1-20): ");
+
+document.getElementById("demo").innerHTML = myFunction(num);
+
+</script>
+
+</body>
+</html>
